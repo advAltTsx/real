@@ -66,7 +66,7 @@ export default function Navbar() {
       <div className="h-full w-1/5 flex items-center justify-center">
         <Sheet>
           <SheetTrigger>
-            <Squeeze color="white" toggled={isOpen} size={25} />
+            <Squeeze color="white" toggled={isOpen} size={20} />
           </SheetTrigger>
           <SheetContent
             className="bg-black border-none"
