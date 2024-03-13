@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="h-1/2 w-full">
           <h1 className=" text-2xl py-6 font-extrabold text-white">
             Projects <br />
-            <Link href={"https://advnote.vercel.app/"}>
+            <Link href={"https://advnote.abhyudaya.xyz/"}>
               {" "}
               <span className=" font-semibold text-sm text-white/70">
                 ADVNote
@@ -34,7 +34,7 @@ export default function Footer() {
             Socials <br />
             <Link href={"https://instagram.com/advwastaken"}>
               {" "}
-              <span className=" font-semibold text-sm text-white/70">
+              <span className="font-semibold text-sm text-white/70">
                 Instagram
               </span>
             </Link>
