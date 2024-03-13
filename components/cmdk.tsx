@@ -103,7 +103,7 @@ function Home({ searchProjects }: { searchProjects: Function }) {
         </Link>
       </Command.Group>
       <Command.Group heading="Projects">
-        <Link href={'https://advnote.vercel.app'}>
+        <Link href={'https://advnote.abhyudaya.xyz'}>
         <Item>
           <SendIcon />
           ADVNote
