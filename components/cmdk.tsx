@@ -1,7 +1,7 @@
 import React from 'react'
 import { Command } from 'cmdk'
 import './vercel.scss'
-import { HomeIcon } from 'lucide-react'
+import { HomeIcon, SendIcon, InstagramIcon } from 'lucide-react'
 import Link from 'next/link'
 
 export function VercelCMDK() {
@@ -99,6 +99,22 @@ function Home({ searchProjects }: { searchProjects: Function }) {
         <Item>
           <HomeIcon />
           Home
+        </Item>
+        </Link>
+      </Command.Group>
+      <Command.Group heading="Projects">
+        <Link href={'https://advnote.vercel.app'}>
+        <Item>
+          <SendIcon />
+          ADVNote
+        </Item>
+        </Link>
+      </Command.Group>
+      <Command.Group heading="Socials">
+        <Link href={'https://instagram.com/advwastaken'}>
+        <Item>
+          <InstagramIcon />
+          Instagram
         </Item>
         </Link>
       </Command.Group>
