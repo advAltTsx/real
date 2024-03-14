@@ -7,6 +7,7 @@ import {
   InstagramIcon,
   FileSearch,
   UserRound,
+  Mail,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -113,6 +114,12 @@ function Home({ searchProjects }: { searchProjects: Function }) {
           <Item>
             <UserRound />
             About
+          </Item>
+        </Link>
+        <Link href={'/contact'}>
+          <Item>
+            <Mail />
+            Contact
           </Item>
         </Link>
       </Command.Group>
