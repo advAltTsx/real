@@ -6,12 +6,12 @@ export default function Home() {
       <h1 className="text-3xl font-bold dark:text-white text-black">
         Hi there
       </h1>
-      <h1 className="text-xl font-light dark:text-white text-black/80">
+      <h1 className="text-lg font-light dark:text-white text-black/80">
         {
           "I'm Abhyudaya, a student from India, passionated about how the technology works."
         }
       </h1>
-      <h1 className="text-xl font-light dark:text-white text-black/80">
+      <h1 className=" text-lg font-light dark:text-white text-black/80">
         Also, I intensely like coffee.
       </h1>
     </main>

@@ -1,7 +1,13 @@
 import React from 'react';
 import { Command } from 'cmdk';
 import './vercel.scss';
-import { HomeIcon, Notebook, InstagramIcon, FileSearch } from 'lucide-react';
+import {
+  HomeIcon,
+  Notebook,
+  InstagramIcon,
+  FileSearch,
+  UserRound,
+} from 'lucide-react';
 import Link from 'next/link';
 
 export function VercelCMDK() {
@@ -101,6 +107,12 @@ function Home({ searchProjects }: { searchProjects: Function }) {
           <Item>
             <HomeIcon />
             Home
+          </Item>
+        </Link>
+        <Link href={'/about'}>
+          <Item>
+            <UserRound />
+            About
           </Item>
         </Link>
       </Command.Group>
