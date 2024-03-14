@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="h-full w-1/2 flex flex-col">
           <div className="h-1/2 w-full space-x-4">
             <h1 className="py-6 text-2xl font-extrabold dark:text-white text-black">
-              Quick links <br />
+              Quick Actions <br />
               <Link href={'/'}>
                 {' '}
                 <span className=" font-semibold text-sm dark:text-white text-black/70">
