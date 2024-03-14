@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import localFont from '@next/font/local';
+import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
+import { VercelCMDK } from './cmdk';
 
 const nothing = localFont({
   src: [
@@ -26,6 +28,17 @@ export default function Footer() {
                   Home
                 </span>
               </Link>
+              <br />
+              <Dialog>
+                <DialogTrigger>
+                  <span className=" font-semibold text-sm dark:text-white text-black/70">
+                    Command Pallete
+                  </span>
+                </DialogTrigger>
+                <DialogContent className=" bg-black border-none">
+                  <VercelCMDK />
+                </DialogContent>
+              </Dialog>
             </h1>
           </div>
           <div className="h-1/2 w-full">
