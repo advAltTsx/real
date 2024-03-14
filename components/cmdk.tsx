@@ -1,7 +1,7 @@
 import React from 'react';
 import { Command } from 'cmdk';
 import './vercel.scss';
-import { HomeIcon, SendIcon, InstagramIcon, FileSearch } from 'lucide-react';
+import { HomeIcon, Notebook, InstagramIcon, FileSearch } from 'lucide-react';
 import Link from 'next/link';
 
 export function VercelCMDK() {
@@ -107,7 +107,7 @@ function Home({ searchProjects }: { searchProjects: Function }) {
       <Command.Group heading="Projects">
         <Link href={'https://advnote.abhyudaya.xyz'}>
           <Item>
-            <SendIcon />
+            <Notebook />
             ADVNote
           </Item>
         </Link>
