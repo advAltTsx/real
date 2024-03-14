@@ -1,49 +1,49 @@
-import React from 'react'
-import { Command } from 'cmdk'
-import './vercel.scss'
-import { HomeIcon, SendIcon, InstagramIcon } from 'lucide-react'
-import Link from 'next/link'
+import React from 'react';
+import { Command } from 'cmdk';
+import './vercel.scss';
+import { HomeIcon, SendIcon, InstagramIcon, FileSearch } from 'lucide-react';
+import Link from 'next/link';
 
 export function VercelCMDK() {
-  const ref = React.useRef<HTMLDivElement | null>(null)
-  const [inputValue, setInputValue] = React.useState('')
+  const ref = React.useRef<HTMLDivElement | null>(null);
+  const [inputValue, setInputValue] = React.useState('');
 
-  const [pages, setPages] = React.useState<string[]>(['home'])
-  const activePage = pages[pages.length - 1]
-  const isHome = activePage === 'home'
+  const [pages, setPages] = React.useState<string[]>(['home']);
+  const activePage = pages[pages.length - 1];
+  const isHome = activePage === 'home';
 
   const popPage = React.useCallback(() => {
     setPages((pages) => {
-      const x = [...pages]
-      x.splice(-1, 1)
-      return x
-    })
-  }, [])
+      const x = [...pages];
+      x.splice(-1, 1);
+      return x;
+    });
+  }, []);
 
   const onKeyDown = React.useCallback(
     (e: KeyboardEvent) => {
       if (isHome || inputValue.length) {
-        return
+        return;
       }
 
       if (e.key === 'Backspace') {
-        e.preventDefault()
-        popPage()
+        e.preventDefault();
+        popPage();
       }
     },
-    [inputValue.length, isHome, popPage],
-  )
+    [inputValue.length, isHome, popPage]
+  );
 
   function bounce() {
     if (ref.current) {
-      ref.current.style.transform = 'scale(0.96)'
+      ref.current.style.transform = 'scale(0.96)';
       setTimeout(() => {
         if (ref.current) {
-          ref.current.style.transform = ''
+          ref.current.style.transform = '';
         }
-      }, 100)
+      }, 100);
 
-      setInputValue('')
+      setInputValue('');
     }
   }
 
@@ -53,17 +53,17 @@ export function VercelCMDK() {
         ref={ref}
         onKeyDown={(e: React.KeyboardEvent) => {
           if (e.key === 'Enter') {
-            bounce()
+            bounce();
           }
 
           if (isHome || inputValue.length) {
-            return
+            return;
           }
 
           if (e.key === 'Backspace') {
-            e.preventDefault()
-            popPage()
-            bounce()
+            e.preventDefault();
+            popPage();
+            bounce();
           }
         }}
       >
@@ -78,17 +78,19 @@ export function VercelCMDK() {
           autoFocus
           placeholder="What do you need?"
           onValueChange={(value) => {
-            setInputValue(value)
+            setInputValue(value);
           }}
         />
         <Command.List>
           <Command.Empty>No results found.</Command.Empty>
-          {activePage === 'home' && <Home searchProjects={() => setPages([...pages, 'projects'])} />}
+          {activePage === 'home' && (
+            <Home searchProjects={() => setPages([...pages, 'projects'])} />
+          )}
           {activePage === 'projects' && <Projects />}
         </Command.List>
       </Command>
     </div>
-  )
+  );
 }
 
 function Home({ searchProjects }: { searchProjects: Function }) {
@@ -96,31 +98,36 @@ function Home({ searchProjects }: { searchProjects: Function }) {
     <>
       <Command.Group heading="Pages">
         <Link href={'/'}>
-        <Item>
-          <HomeIcon />
-          Home
-        </Item>
+          <Item>
+            <HomeIcon />
+            Home
+          </Item>
         </Link>
       </Command.Group>
       <Command.Group heading="Projects">
         <Link href={'https://advnote.abhyudaya.xyz'}>
-        <Item>
-          <SendIcon />
-          ADVNote
-        </Item>
+          <Item>
+            <SendIcon />
+            ADVNote
+          </Item>
+        </Link>
+        <Link href={'https://search.abhyudaya.xyz'}>
+          <Item>
+            <FileSearch />
+            ADVSearch
+          </Item>
         </Link>
       </Command.Group>
       <Command.Group heading="Socials">
         <Link href={'https://instagram.com/advwastaken'}>
-        <Item>
-          <InstagramIcon />
-          Instagram
-        </Item>
+          <Item>
+            <InstagramIcon />
+            Instagram
+          </Item>
         </Link>
       </Command.Group>
-      
     </>
-  )
+  );
 }
 
 function Projects() {
@@ -133,7 +140,7 @@ function Projects() {
       <Item>Project 5</Item>
       <Item>Project 6</Item>
     </>
-  )
+  );
 }
 
 function Item({
@@ -141,9 +148,9 @@ function Item({
   shortcut,
   onSelect = () => {},
 }: {
-  children: React.ReactNode
-  shortcut?: string
-  onSelect?: (value: string) => void
+  children: React.ReactNode;
+  shortcut?: string;
+  onSelect?: (value: string) => void;
 }) {
   return (
     <Command.Item onSelect={onSelect}>
@@ -151,10 +158,10 @@ function Item({
       {shortcut && (
         <div cmdk-vercel-shortcuts="">
           {shortcut.split(' ').map((key) => {
-            return <kbd key={key}>{key}</kbd>
+            return <kbd key={key}>{key}</kbd>;
           })}
         </div>
       )}
     </Command.Item>
-  )
+  );
 }
