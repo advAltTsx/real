@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import Head from 'next/head';
 
 export default function Home() {
   return (
@@ -24,6 +25,9 @@ export default function Home() {
         height={2000}
         alt="construction"
       /> */}
+      <Head>
+        <title>Abhyudaya - Home</title>
+      </Head>
 
       <div className="fsec h-auto py-24 px-0 flex flex-col items-center justify-center">
         <Image
@@ -95,7 +99,7 @@ export default function Home() {
               </AccordionTrigger>
               <AccordionContent>
                 Definitely yes, but requires time. Generally ranging from 5-20
-                days depending upon the type and avalability.
+                days depending upon the type and availability.
               </AccordionContent>
             </div>
           </AccordionItem>
@@ -103,7 +107,7 @@ export default function Home() {
             <div className="text-left">
               <AccordionTrigger>{"What's the $?"}</AccordionTrigger>
               <AccordionContent>
-                Depending upon the type and avalability, however discussions
+                Depending upon the type and availability, however discussions
                 earlier while contracting the deal.
               </AccordionContent>
             </div>

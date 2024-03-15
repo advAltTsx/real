@@ -1,9 +1,13 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function About() {
   return (
     <main className="flex h-[calc(100vh-20vh)] dark:bg-black bg-white flex-col items-center justify-center p-12 text-center">
+      <Head>
+        <title>Abhyudaya - About</title>
+      </Head>
       <h1 className="text-3xl font-bold dark:text-white text-black">
         Hi there
       </h1>

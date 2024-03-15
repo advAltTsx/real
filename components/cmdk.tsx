@@ -8,6 +8,7 @@ import {
   FileSearch,
   UserRound,
   Mail,
+  BookOpen,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -142,6 +143,12 @@ function Home({ searchProjects }: { searchProjects: Function }) {
           <Item>
             <InstagramIcon />
             Instagram
+          </Item>
+        </Link>
+        <Link href={'https://blogs.abhyudaya.xyz'}>
+          <Item>
+            <BookOpen />
+            Blogs
           </Item>
         </Link>
       </Command.Group>

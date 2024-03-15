@@ -39,6 +39,13 @@ export default function Footer() {
                   <VercelCMDK />
                 </DialogContent>
               </Dialog>
+              <br />
+              <Link href={'https://blogs.abhyudaya.xyz'}>
+                {' '}
+                <span className=" font-semibold text-sm dark:text-white/70 text-black/70">
+                  Blogs
+                </span>
+              </Link>
             </h1>
           </div>
           <div className="h-1/2 w-full">
