@@ -66,7 +66,7 @@ export default function Home() {
           className=" w-full h-auto md:w-[50vw] lg:w-[40vw] hidden dark:block"
         />
       </div>
-      <div className="tsec h-auto w-full md:w-[50vw] lg:w-[40vw] py-24 pb-32 px-[5rem] flex flex-col items-center justify-center">
+      <div className="tsec h-auto w-[70vw] text-left md:w-[50vw] lg:w-[40vw] py-24 pb-32 flex flex-col items-center justify-center">
         <div className="flex items-center justify-center py-6">
           <h1 className=" text-3xl dark:text-white text-black font-medium">
             FAQs
@@ -74,31 +74,37 @@ export default function Home() {
         </div>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger>How to contact me?</AccordionTrigger>
-            <AccordionContent>
-              Head on to the{' '}
-              <Link href={'/contact'}>
-                <span className=" underline text-blue-600 font-bold">
-                  Contact Page
-                </span>
-              </Link>
-            </AccordionContent>
+            <div className="text-left">
+              <AccordionTrigger>How to contact me?</AccordionTrigger>
+              <AccordionContent>
+                Head on to the{' '}
+                <Link href={'/contact'}>
+                  <span className=" underline text-blue-600 font-bold">
+                    Contact Page
+                  </span>
+                </Link>
+              </AccordionContent>
+            </div>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>
-              Could you build ecommerce websites?
-            </AccordionTrigger>
-            <AccordionContent>
-              Definitely yes, but requires time. Generally ranging from 5-20
-              days depending upon the type and avalability.
-            </AccordionContent>
+            <div className="text-left">
+              <AccordionTrigger>
+                Could you build ecommerce websites?
+              </AccordionTrigger>
+              <AccordionContent>
+                Definitely yes, but requires time. Generally ranging from 5-20
+                days depending upon the type and avalability.
+              </AccordionContent>
+            </div>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>{"What's the $?"}</AccordionTrigger>
-            <AccordionContent>
-              Depending upon the type and avalability, however discussions
-              earlier while contracting the deal.
-            </AccordionContent>
+            <div className="text-left">
+              <AccordionTrigger>{"What's the $?"}</AccordionTrigger>
+              <AccordionContent>
+                Depending upon the type and avalability, however discussions
+                earlier while contracting the deal.
+              </AccordionContent>
+            </div>
           </AccordionItem>
         </Accordion>
       </div>
