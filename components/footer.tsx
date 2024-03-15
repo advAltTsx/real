@@ -16,7 +16,7 @@ const nothing = localFont({
 
 export default function Footer() {
   return (
-    <footer className="h-auto p-6 w-full dark:bg-black bg-white">
+    <footer className="h-auto p-6 md:px-[20vw] lg:px-[20vw] w-full dark:bg-black bg-white">
       <div className="h-auto py-12 w-full flex ">
         <div className="h-full w-1/2 flex flex-col">
           <div className="h-1/2 w-full space-x-4">
@@ -24,14 +24,14 @@ export default function Footer() {
               Quick links <br />
               <Link href={'/'}>
                 {' '}
-                <span className=" font-semibold text-sm dark:text-white text-black/70">
+                <span className=" font-semibold text-sm dark:text-white/70 text-black/70">
                   Home
                 </span>
               </Link>
               <br />
               <Dialog>
                 <DialogTrigger>
-                  <span className=" font-semibold text-sm dark:text-white text-black/70">
+                  <span className=" font-semibold text-sm dark:text-white/70 text-black/70">
                     Command Box
                   </span>
                 </DialogTrigger>
@@ -46,26 +46,26 @@ export default function Footer() {
               Projects <br />
               <Link href={'https://advnote.abhyudaya.xyz'}>
                 {' '}
-                <span className=" font-semibold text-sm dark:text-white text-black/70">
+                <span className=" font-semibold text-sm dark:text-white/70 text-black/70">
                   ADVNote
                 </span>
               </Link>{' '}
               <br />
               <Link href={'https://search.abhyudaya.xyz'}>
                 {' '}
-                <span className=" font-semibold text-sm dark:text-white text-black/70">
+                <span className=" font-semibold text-sm dark:text-white/70 text-black/70">
                   ADVSearch
                 </span>
               </Link>
             </h1>
           </div>
         </div>
-        <div className="h-full w-1/2">
+        <div className="h-full w-1/2 lg:flex lg:flex-col lg:justify-end">
           <h1 className="py-6 text-2xl font-extrabold dark:text-white text-black">
             Socials <br />
             <Link href={'https://instagram.com/advwastaken'}>
               {' '}
-              <span className=" font-semibold text-sm dark:text-white text-black/70">
+              <span className=" font-semibold text-sm dark:text-white/70 text-black/70">
                 Instagram
               </span>
             </Link>
@@ -74,7 +74,7 @@ export default function Footer() {
       </div>
       <div className="h-auto w-full flex items-center justify-center text-center">
         <p
-          className={`dark:text-white text-black/90 ${nothing.variable} font-sans`}
+          className={`dark:text-white text-sm font-bold text-black/90 ${nothing.variable} font-sans`}
         >
           {' '}
           ©Abhyudaya 2024

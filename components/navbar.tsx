@@ -43,13 +43,15 @@ export default function Navbar() {
       <div className="h-full w-1/5 flex items-center justify-center">
         <DropdownMenu>
           <DropdownMenuTrigger>
-            <Image
-              className="rounded-full"
-              src={'/logo.jpg'}
-              width={40}
-              height={40}
-              alt="Logo"
-            />
+            <Link href={'/'}>
+              <Image
+                className="rounded-full"
+                src={'/logo.jpg'}
+                width={40}
+                height={40}
+                alt="Logo"
+              />
+            </Link>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="dark:bg-black bg-white dark:text-white text-black border-none p-2">
             <DropdownMenuLabel className="font-nothing">
@@ -88,19 +90,13 @@ export default function Navbar() {
             align="end"
           >
             <DropdownMenuItem onClick={() => setTheme('light')}>
-              <DropdownMenuLabel className="font-nothing">
-                Light
-              </DropdownMenuLabel>
+              Light
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => setTheme('dark')}>
-              <DropdownMenuLabel className="font-nothing">
-                Dark
-              </DropdownMenuLabel>
+              Dark
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => setTheme('system')}>
-              <DropdownMenuLabel className="font-nothing">
-                System
-              </DropdownMenuLabel>
+              System
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
