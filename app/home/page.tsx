@@ -89,7 +89,9 @@ export default function Home() {
           <AccordionItem value="item-2">
             <div className="text-left">
               <AccordionTrigger>
-                Could you build ecommerce websites?
+                <div className="text-left">
+                  Could you build ecommerce websites?
+                </div>
               </AccordionTrigger>
               <AccordionContent>
                 Definitely yes, but requires time. Generally ranging from 5-20
