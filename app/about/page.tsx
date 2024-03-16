@@ -2,6 +2,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Abhyudaya - About',
+};
+
 export default function About() {
   return (
     <main className="flex h-[calc(100vh-20vh)] dark:bg-black bg-white flex-col items-center justify-center p-12 text-center">

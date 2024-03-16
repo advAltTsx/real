@@ -7,6 +7,11 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import Head from 'next/head';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Abhyudaya - Home',
+};
 
 export default function Home() {
   return (

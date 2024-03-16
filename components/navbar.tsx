@@ -41,7 +41,6 @@ export default function Navbar() {
   return (
     <nav className="h-auto py-8 w-full flex dark:bg-black bg-white">
       <div className="h-full w-1/5 flex items-center justify-center">
-        
             <Link href={'/'}>
               <Image
                 className="rounded-full"
@@ -51,7 +50,6 @@ export default function Navbar() {
                 alt="Logo"
               />
             </Link>
-       
       </div>
       <div className="h-full w-3/5 flex items-center justify-center">
         <Dialog>
