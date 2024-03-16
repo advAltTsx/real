@@ -43,9 +43,9 @@ export default function About() {
   ];
   return (
     <>
+      <Confetti width={width} height={height} />
 
       <main className="flex h-[calc(100vh-20vh)]  w-full dark:bg-black bg-white flex-col items-center justify-center p-12 text-center">
-      <Confetti width={width} height={height} />
        
         <div className="h-[80vh] w-full flex items-center bg-grid-white/[0.2] justify-center">
           <Dialog>
