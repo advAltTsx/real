@@ -41,8 +41,7 @@ export default function Navbar() {
   return (
     <nav className="h-auto py-8 w-full flex dark:bg-black bg-white">
       <div className="h-full w-1/5 flex items-center justify-center">
-        <DropdownMenu>
-          <DropdownMenuTrigger>
+        
             <Link href={'/'}>
               <Image
                 className="rounded-full"
@@ -52,13 +51,7 @@ export default function Navbar() {
                 alt="Logo"
               />
             </Link>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="dark:bg-black bg-white dark:text-white text-black border-none p-2">
-            <DropdownMenuLabel className="font-nothing">
-              Abhyudaya Deep Verma
-            </DropdownMenuLabel>
-          </DropdownMenuContent>
-        </DropdownMenu>
+       
       </div>
       <div className="h-full w-3/5 flex items-center justify-center">
         <Dialog>
