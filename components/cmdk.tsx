@@ -139,16 +139,16 @@ function Home({ searchProjects }: { searchProjects: Function }) {
         </Link>
       </Command.Group>
       <Command.Group heading="Socials">
+       <Link href={'https://blogs.abhyudaya.xyz'}>
+          <Item>
+            <BookOpen />
+            Blogs
+          </Item>
+        </Link>
         <Link href={'https://instagram.com/advwastaken'}>
           <Item>
             <InstagramIcon />
             Instagram
-          </Item>
-        </Link>
-        <Link href={'https://blogs.abhyudaya.xyz'}>
-          <Item>
-            <BookOpen />
-            Blogs
           </Item>
         </Link>
       </Command.Group>
