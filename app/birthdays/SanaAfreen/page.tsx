@@ -6,7 +6,9 @@ import Link from 'next/link';
 
 import { Metadata } from 'next';
 import useWindowSize from 'react-use/lib/useWindowSize';
-import Confetti from 'react-confetti';
+const Confetti = dynamic(() => import('react-confetti'), {
+  ssr: false,
+});
 import { AnimatedTooltip } from '@/components/ui/animated-tooltip';
 import ReactInstaStories from 'react-insta-stories';
 
@@ -18,9 +20,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import dynamic from 'next/dynamic';
 
 export default function About() {
   const { width, height } = useWindowSize();
+  console.log(width, height);
   const stories = [
     {
       url: 'https://static.vecteezy.com/system/resources/previews/000/257/348/non_2x/beautiful-happy-birthday-card-colorful-watercolor-background-vector.jpg',
@@ -46,7 +50,6 @@ export default function About() {
       <Confetti width={width} height={height} />
 
       <main className="flex h-[calc(100vh-20vh)]  w-full dark:bg-black bg-white flex-col items-center justify-center p-12 text-center">
-       
         <div className="h-[80vh] w-full flex items-center bg-grid-white/[0.2] justify-center">
           <Dialog>
             <DialogTrigger>
