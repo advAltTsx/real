@@ -124,7 +124,7 @@ function Home({ searchProjects }: { searchProjects: Function }) {
           </Item>
         </Link>
       </Command.Group>
-      <Command.Group heading="Projects">
+      <Command.Group heading="Products">
         <Link href={'https://advnote.abhyudaya.xyz'}>
           <Item>
             <Notebook />
