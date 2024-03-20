@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Metadata } from 'next';
+import { NextSeo } from 'next-seo';
 
 export const metadata: Metadata = {
   title: 'Abhyudaya - About',
@@ -14,6 +15,16 @@ export default function About() {
       <Head>
         <title>Abhyudaya - About</title>
       </Head>
+      <NextSeo
+        title="Abhyudaya - Home"
+        description="About Deep Abhyudaya."
+        additionalLinkTags={[
+          {
+            rel: 'icon',
+            href: '/logo.jpg',
+          },
+        ]}
+      />
       <h1 className="text-3xl font-bold dark:text-white text-black">
         Hi there
       </h1>

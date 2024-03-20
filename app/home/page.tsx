@@ -11,10 +11,21 @@ import {
 import Head from 'next/head';
 import { Metadata } from 'next';
 import GlobeSec from '@/components/globe';
+import { NextSeo } from 'next-seo';
 
 export default function Home() {
   return (
     <main className="flex h-auto dark:bg-black bg-white flex-col items-center justify-center py-12">
+      <NextSeo
+        title="Abhyudaya - Home"
+        description="Portfolio of Deep Abhyudaya."
+        additionalLinkTags={[
+          {
+            rel: 'icon',
+            href: '/logo.jpg',
+          },
+        ]}
+      />
       <title>Abhyudaya - Home</title>
 
       <div className="fsec h-auto py-24 px-0 flex flex-col items-center justify-center">

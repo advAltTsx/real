@@ -399,7 +399,7 @@ export default function GlobeSec() {
   return (
     <div className="tsec py-44 pb-0 h-auto w-full text-left md:w-[50vw] lg:w-[40vw] flex flex-col items-center justify-center">
       <h1 className=" text-3xl mb-3 dark:text-white text-black font-medium">
-        Speed across the Globe
+        Speed across all countries
       </h1>
       <div className="w-[300px] h-[300px]">
         <World data={sampleArcs} globeConfig={globeConfig} />
