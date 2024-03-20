@@ -1,29 +1,25 @@
+'use client';
+
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { NextSeo } from 'next-seo';
 
-export const metadata: Metadata = {
-  title: 'Abhyudaya - Contact',
-};
-
 export default function About() {
   return (
     <main className="flex h-[calc(100vh-20vh)] dark:bg-black bg-white flex-col items-center justify-center p-12 text-center">
-      <Head>
-        <title>Abhyudaya - Contact</title>
-      </Head>
       <NextSeo
+        title="Abhyudaya - Contact"
+        description="Contact Deep Abhyudaya."
         additionalLinkTags={[
           {
             rel: 'icon',
             href: '/logo.jpg',
           },
         ]}
-        title="Abhyudaya - Home"
-        description="Contact Deep Abhyudaya."
       />
+      <title>Abhyudaya - Contact</title>
       <Image
         className="hidden dark:block w-full h-auto md:w-[50vw] lg:w-[40vw]"
         src={'/contact/contact-dark.jpg'}

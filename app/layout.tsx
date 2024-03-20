@@ -36,7 +36,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <NextSeo {...Seo} />
+      <NextSeo
+        {...Seo}
+        additionalLinkTags={[
+          {
+            rel: 'icon',
+            href: '/logo.jpg',
+          },
+        ]}
+      />
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
