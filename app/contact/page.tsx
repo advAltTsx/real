@@ -21,14 +21,14 @@ export default function About() {
       />
       <title>Abhyudaya - Contact</title>
       <Image
-        className="hidden dark:block w-full h-auto md:w-[50vw] lg:w-[40vw]"
+        className="hidden dark:block w-full h-auto md:w-[50vw] lg:w-[30vw]"
         src={'/contact/contact-dark.jpg'}
         width={2000}
         height={2000}
         alt="Contact"
       />
       <Image
-        className="dark:hidden w-full h-auto md:w-[50vw] lg:w-[40vw]"
+        className="dark:hidden w-full h-auto md:w-[50vw] lg:w-[30vw]"
         src={'/contact/contact-light.jpg'}
         width={2000}
         height={2000}
